@@ -37,12 +37,14 @@ body{
   width: 1260px;
   height: auto;
 }
-/* .img-world-logo{
-  float: left;
-} */
-/* .img-world-cdmx{
-  float: right;
-} */
+.img-world-logo{
+  display: flex;
+  flex-direction: initial;
+}
+.img-world-cdmx{
+  display: flex;
+  flex-direction: right;
+}
 main{
     background-image: url("../assets/Rectángulo 3 copia.png");
     padding: 20px;
@@ -50,6 +52,14 @@ main{
 }
 .form{
     background-image: url("../assets/fondo 01.png");
+}
+b-button{
+  color: #321BDD;
+  border-radius: 20px;
+}
+.btn-confirmar{
+  color: #321BDD;
+  border-radius: 20px;
 }
 .footer{
   position: fixed;
