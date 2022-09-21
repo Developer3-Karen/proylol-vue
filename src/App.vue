@@ -4,11 +4,11 @@
       <router-link to="/">Construccion</router-link>
       <router-link to="/inicioregistro">Inicio</router-link>
       <router-link to="/registro">Registro</router-link>
+      <router-link to="/confirmacorreo">Confirma correo</router-link>
     </nav>
     <router-view/>
   </div>
 </template>
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
