@@ -5,7 +5,9 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 
     <img class="pWorlds2022" alt="Worlds 2022" src="../assets/worlDs_cdmx_2022.png">
-    <p class="pcoming">COMING SOON</p>
+    <center>
+      <b-button class="btn-registrate" type="submit" variant="primary">REGÍSTRATE</b-button>
+    </center>
     <div class="footer">
       <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png">
     </div>
@@ -14,6 +16,7 @@
 
 <style>
 body{
+  font-family: ;
   background-image: url(../assets/fondo.png);
   background-position: center center;
   background-attachment: fixed;
@@ -25,7 +28,7 @@ body{
   padding: 0px 0px 40px 0px;
 }
 .pWorlds2022{
-  padding: 0px 0px 20px 0px;
+  padding: 0px 0px 40px 0px;
 
 }
 .pcoming{
@@ -33,10 +36,11 @@ body{
   color: rgb(242, 242, 242);
   font-size: 40px;
 }
-.decora{
+/* .decora{
+  padding-top: 120px;
   width: 1260px;
   height: auto;
-}
+} */
 /* .img-world-logo{
   float: left;
 } */
@@ -51,13 +55,39 @@ main{
 .form{
     background-image: url("../assets/fondo 01.png");
 }
-.footer{
-  position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
+.btn-registrate{
+  border-radius: 5px;
+}
+
+/*Responsivo para Moviles*/
+@media (max-width: 400px) {
+    .home {
+      max-width: 90%;
+      height: auto;
+    }
+}
+/*Responsivo para Tablets*/
+
+@media (min-width: 400px) and (max-width: 1024px) {
+    img {
+      max-width: 90%;
+      height: auto;
+    }
+}
+/*Responsivo para Escritorio*/
+@media (min-width: 1025px) and (max-width: 1980px){
+    img {
+      max-width: 90%;
+      height: auto;
+    }
+}
+
+/*Responsivo para Full Hd*/
+@media (min-width: 1981px) {
+  img {
+      max-width: 100%;
+      height: auto;
+  }
 }
 </style>
 <script>
