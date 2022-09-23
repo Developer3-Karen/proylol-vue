@@ -11,9 +11,10 @@
             <img src="../assets/LOGO_preview_rev_1.png" alt="">
           </b-col>
           <b-col cols="12" md="6" lg="4">
+            <!-- <b-form @submit="onSubmit" @reset="onReset" v-if="show"> -->
             <!-- eslint-disable-next-line max-len -->
             <b-form-group id="fieldset-1" style="color: #F2F2F2; text-align: left; margin-bottom: 20px; font-size: 20px; font-family: 'PPFraktionSans-Bold';"
-              description="Let us know your name."
+              description="Escriba su nombre"
               label="NOMBRE"
               label-for="input-1"
               valid-feedback="Thank you!"
@@ -21,11 +22,11 @@
               :state="state"
             >
             <!-- eslint-disable-next-line max-len -->
-              <b-form-input id="input-1" style="width: 430px; border-radius: 50px; text-align: left; font-size: 20px; font-family: 'PPFraktionSans-Bold';" v-model="name" :state="state" trim></b-form-input>
+              <b-form-input id="input-1" style="border-radius: 50px; text-align: left; font-size: 20px; font-family: 'PPFraktionSans-Bold';" v-model="name" :state="state" trim></b-form-input>
             </b-form-group>
             <!-- eslint-disable-next-line max-len -->
             <b-form-group id="fieldset-1" style="color: #F2F2F2; text-align: left; margin-bottom: 20px; font-size: 20px; font-family: 'PPFraktionSans-Bold';"
-              description="Let us know your name."
+              description="Escriba su correo electrónico"
               label="CORREO"
               label-for="input-1"
               valid-feedback="Thank you!"
@@ -33,11 +34,11 @@
               :state="state"
             >
             <!-- eslint-disable-next-line max-len -->
-              <b-form-input id="input-1" style="width: 430px; border-radius: 50px; text-align:left; font-family: 'PPFraktionSans-Bold';" v-model="name" :state="state" trim type="email" required></b-form-input>
+              <b-form-input id="input-1" style="border-radius: 50px; text-align:left; font-family: 'PPFraktionSans-Bold'; font-size: 20px;" v-model="name" :state="state" trim type="email" required></b-form-input>
             </b-form-group>
             <!-- eslint-disable-next-line max-len -->
             <b-form-group id="fieldset-1" style="color: #F2F2F2; text-align: left; margin-bottom: 20px; font-size: 20px; font-family: 'PPFraktionSans-Bold';"
-              description="Let us know your name."
+              description="Escriba su código de verificación"
               label="CÓDIGO DE VERIFICACIÓN"
               label-for="input-1"
               valid-feedback="Thank you!"
@@ -45,10 +46,11 @@
               :state="state"
             >
                     <!-- eslint-disable-next-line max-len -->
-                    <b-form-input id="input-1" style="width: 430px; border-radius: 50px; text-align:left; font-family: 'PPFraktionSans-Bold';" v-model="name" :state="state" trim></b-form-input>
+                    <b-form-input id="input-1" style="border-radius: 50px; text-align:left; font-family: 'PPFraktionSans-Bold'; font-size: 20px;" v-model="name" :state="state" trim></b-form-input>
             </b-form-group>
             <!-- eslint-disable-next-line max-len -->
-            <b-button style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 230px; border: none; font-size: 20px; margin-top: 20px; font-family: 'PPFraktionSans';">REGÍSTRATE</b-button>
+            <b-button style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 230px; border: none; font-size: 20px; margin-top: 20px; font-family: 'PPFraktionSans-Bold';">REGÍSTRATE</b-button>
+          <!-- </b-form> -->
           </b-col>
         </b-row>
       </b-container>

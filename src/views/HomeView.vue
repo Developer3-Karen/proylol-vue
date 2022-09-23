@@ -25,6 +25,10 @@
     font-family: "PPFraktionSans-Bold";
     src: url("../assets/fonts/Fraktion/PPFraktionSans-Bold.otf")format("woff");
 }
+@font-face{
+    font-family: "Manuka-Bold";
+    src: url("../assets/fonts/MANUKA/Manuka-Bold.otf")format("woff");
+}
 
 body{
   font-weight: bold;
@@ -84,6 +88,14 @@ header{
 .form{
     background-image: url("../assets/fondo 01.png");
 }
+.correoexito{
+       background-image: url("../assets/landing_0000s_0004_FINALS.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
 b-button{
   color: #321BDD;
   border-radius: 30px;
@@ -142,6 +154,10 @@ b-button{
   background-repeat: no-repeat;
   background-size: cover;
 }
+.input-codigo{
+      height: 40px;
+      width: 50px;
+}
 
 /*Responsivo para Moviles*/
   @media (max-width: 400px) {
@@ -149,6 +165,10 @@ b-button{
         max-width: 100%;
         height: auto;
       }
+    .input-codigo{
+      width: 100%;
+      margin-top: 0;
+    }
   }
 /*Responsivo para Tablets*/
   @media (min-width: 400px) and (max-width: 1024px) {
@@ -156,6 +176,10 @@ b-button{
         max-width: 100%;
         height: auto;
       }
+      .input-codigo{
+      width: 100%;
+      margin-top: 0;
+    }
   }
 /*Responsivo para Escritorio*/
   @media (min-width: 1025px) and (max-width: 1980px){
@@ -163,12 +187,20 @@ b-button{
         max-width: 100%;
         height: auto;
       }
+      .input-codigo{
+      width: 100%;
+      margin-top: 0;
+    }
   }
 /*Responsivo para Full Hd*/
   @media (min-width: 1981px) {
     img {
         max-width: 100%;
         height: auto;
+    }
+    .input-codigo{
+      width: 100%;
+      margin-top: 0;
     }
   }
 </style>
