@@ -12,6 +12,7 @@
       <router-link to="/boletodiacuatro">Boleto 2 oct</router-link>
       <router-link to="/boletodiacinco">Boleto 3 oct</router-link>
       <router-link to="/boletodiaseis">Boleto 4 oct</router-link>
+      <router-link to="/consumoapi">API</router-link>
     </nav>
     <router-view/>
   </div>
