@@ -13,12 +13,35 @@
 </template>
 
 <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+@font-face{
+    font-family: "PPFraktionMono-Bold";
+    src: url("../assets/fonts/Fraktion/PPFraktionMono-Bold.otf")format("woff");
+}
+@font-face{
+    font-family: "PPFraktionSans-Bold";
+    src: url("../assets/fonts/Fraktion/PPFraktionSans-Bold.otf")format("woff");
+}
+
 body{
+  font-weight: bold;
+  font-family: "PPFraktionSans-Bold";
   background-image: url(../assets/fondo.png);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+section{
+  background-image: url("../assets/fondo 01.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
 }
 .logoWorlds2022{
   /** top right bottom left*/
@@ -38,28 +61,36 @@ body{
   height: auto;
 }
 .img-world-logo{
-  display: flex;
-  flex-direction: initial;
+  margin-top: 30px;
+  text-align : left;
+  margin-right: 550px;
+  height: 69px;
+  width: 292px;
 }
 .img-world-cdmx{
-  display: flex;
-  flex-direction: right;
+  text-align : right;
+  margin-top: 40px;
+  height: 50px;
+  width: 313px;
 }
-main{
+header{
     background-image: url("../assets/Rectángulo 3 copia.png");
-    padding: 20px;
-    margin: 20px;
+    /* margin-bottom: 20px; */
+    margin: 0;
+    padding-right: 0em;
+    height: 130px;
+    width: 100%;
 }
 .form{
     background-image: url("../assets/fondo 01.png");
 }
 b-button{
   color: #321BDD;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 .btn-confirmar{
   color: #321BDD;
-  border-radius: 20px;
+  border-radius: 80px;
 }
 .footer{
   position: fixed;
@@ -69,6 +100,77 @@ b-button{
     color: white;
     text-align: center;
 }
+.boletodiauno{
+  background-image: url("../assets/landing_0000s_0004_FINALS.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.boletodiados{
+  background-image: url("../assets/landing_0000s_0004_FINALS.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.boletodiatres{
+  background-image: url("../assets/landing_0000s_0004_FINALS.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.boletodiacuatro{
+  background-image: url("../assets/landing_0000s_0004_FINALS.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.boletodiacinco{
+  background-image: url("../assets/landing_0000s_0004_FINALS.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.boletodiaseis{
+  background-image: url("../assets/landing_0000s_0004_FINALS.png");
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Responsivo para Moviles*/
+  @media (max-width: 400px) {
+    img {
+        max-width: 100%;
+        height: auto;
+      }
+  }
+/*Responsivo para Tablets*/
+  @media (min-width: 400px) and (max-width: 1024px) {
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+  }
+/*Responsivo para Escritorio*/
+  @media (min-width: 1025px) and (max-width: 1980px){
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+  }
+/*Responsivo para Full Hd*/
+  @media (min-width: 1981px) {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+  }
 </style>
 <script>
 // @ is an alias to /src
