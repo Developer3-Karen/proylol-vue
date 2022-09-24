@@ -4,19 +4,19 @@
       <img class="img-world-logo" src="../assets/logo 01.png" alt="">
       <img class="img-world-cdmx" src="../assets/worlDs_cdmx_2022.png" alt="">
     </header>
-    <section style="padding-top: 80px; " hidden>
+    <section style="padding-top: 80px; " >
       <b-container class="bv-example-row">
         <b-row>
           <b-col>
             <!-- eslint-disable-next-line max-len -->
-            <h1 style="color: #F2F2F2; font-family: 'Manuka-Bold'; padding-bottom: 30px; font-size: 60px;">CONFIRMACIÓN DE CORREO</h1>
+            <h1 style="color: #F2F2F2; font-family: 'Manuka-Bold'; padding-bottom: 30px; font-size: 60px; " >CONFIRMA TU CÓDIGO DE REGISTRO.</h1>
             <!-- eslint-disable-next-line max-len -->
-            <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px; margin-bottom: 2px; margin-left: 12px;">Te enviaremos un correo electrónico</p>
+            <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px; margin-bottom: 2px; margin-left: 12px; padding-top:20px;">Estás a punto de descargar tus boletos, coloca nuevamente</p>
             <!-- eslint-disable-next-line max-len -->
-            <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px; margin-bottom: 2px;">para confirmar tu e-mail</p>
+            <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px; margin-bottom: 2px;">tu código de registro y da clic en el botón verificar.</p>
             <center>
             <!-- eslint-disable-next-line max-len -->
-            <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px;">Escribe a continuación tu código:</p>
+            <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px; padding-top:20px;">Escribe a continuación tu código:</p>
             </center>
           </b-col>
         </b-row>
@@ -31,22 +31,14 @@
         <b-row >
           <b-col >
           <!-- eslint-disable-next-line max-len -->
-            <b-button type="submit" v-on:click="submit" style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">CONFIRMAR CORREO</b-button>
-            <br/>
-            <b-button type="submit" v-on:click="exportToPDF"
-            style="
-            background-color:
-            #321BDD; border-radius: 30px; height:
-             50px; width: 250px; border: none; font-size: 20px;
-             margin-top: 20px;">Descarga tus boletos</b-button>
+            <b-button type="submit" v-on:click="submit" style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">Verificar</b-button>
+            <center><button @click="exportToPDF" class="btn-descarga" hidden>boton</button></center>
           </b-col>
         </b-row>
       </b-container>
     </section>
-    <div id="element-to-convert" >
+    <div id="element-to-convert" style="display:none;" >
       <div class="boletodiatres">
-        <center>
-          <button @click="exportToPDF" class="btn-descarg">Descarga tus boletos</button></center>
         <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
         <br />
         <center>
