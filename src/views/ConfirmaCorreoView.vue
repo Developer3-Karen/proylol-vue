@@ -4,7 +4,7 @@
       <img class="img-world-logo" src="../assets/logo 01.png" alt="">
       <img class="img-world-cdmx" src="../assets/worlDs_cdmx_2022.png" alt="">
     </header>
-    <section style="padding-top: 80px; ">
+    <section style="padding-top: 80px; " hidden>
       <b-container class="bv-example-row">
         <b-row>
           <b-col>
@@ -43,6 +43,39 @@
         </b-row>
       </b-container>
     </section>
+    <div id="element-to-convert" >
+      <div class="boletodiatres">
+        <center>
+          <button @click="exportToPDF" class="btn-descarg">Descarga tus boletos</button></center>
+        <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
+        <br />
+        <center>
+        <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+        <img src="../assets/Capa 1.png" alt="" style="height: 431px; width: auto;">
+        <!-- eslint-disable-next-line max-len -->
+        <p style="color: #F2F2F2; font-size: 20px; margin-top: 10px; font-family: 'Manuka-Bold';">TOKEM1029288</p>
+        <!-- eslint-disable-next-line max-len -->
+        <p style="color: #F2F2F2; font-size: 20px; margin-top: 10px; font-family: 'Manuka-Bold'">Fecha</p>
+          <!-- eslint-disable-next-line max-len -->
+          <p style="font-family: 'Manuka-Bold'; margin-top:10px;width: 540px; height: 40px; background-color: #321BDD; border-radius: 20px; color: #F2F2F2; text-align: center; padding-top: 8px; font-size: 20px;">1 DE OCTUBRE DEL 2022</p>
+          <!-- eslint-disable-next-line max-len -->
+          <p style="font-family: 'Manuka-Bold'; color: #F2F2F2; font-size: 20px;">Hora</p>
+          <!-- eslint-disable-next-line max-len -->
+          <p style="font-family: 'Manuka-Bold'; width: 540px; margin-top:10px; height: 40px; background-color: #321BDD; border-radius: 20px; color: #F2F2F2; text-align: center; padding-top: 8px; font-size: 20px;">12:00 a 22:00 hrs</p>
+          <!-- eslint-disable-next-line max-len -->
+          <p style="font-family: 'Manuka-Bold'; color: #F2F2F2; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
+            Lugar: Centro Cultural Estación Indianilla <br>
+            Dirección: Claudio Bernard 111, Doctores, Cuauhtémoc,<br> 06720 Ciudad de México, CDMX
+          </p>
+        <br>
+        <img class="pWorlds2022" alt="Worlds 2022" src="../assets/worlDs_cdmx_2022.png">
+        <br><br>
+          </center>
+        <div class="footer">
+          <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png">
+        </div>
+      </div>
+    </div>
     <div class="footer">
       <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png">
     </div>
@@ -130,6 +163,12 @@ export default {
     };
   },
   methods: {
+    exportToPDF() {
+      html2pdf(document.getElementById('element-to-convert'), {
+        margin: 0,
+        filename: 'boleto.pdf',
+      });
+    },
     submit() {
       const article = {
         codigo_acceso: this.codigo_acceso,
@@ -186,3 +225,21 @@ export default {
   },
 };
 </script>
+<style>
+  @font-face {
+  font-family: 'PPFraktionSans-Bold';
+  src: url('../assets/fonts/Fraktion/PPFraktionSans-Bold.otf') format('woff');
+}
+  .btn-descarg{
+    background-color: #321bdd;
+    border-radius: 30px;
+    height: 50px;
+    width: 230px;
+   border: none;
+   color: #f2f2f2;
+   margin-bottom: 15px;
+   font-size: 20px;
+   margin-top: 20px;
+   font-family: 'PPFraktionSans-Bold';
+  }
+</style>
