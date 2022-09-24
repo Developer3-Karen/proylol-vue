@@ -1,19 +1,6 @@
 <template>
   <div id="app">
-    <nav>
-      <!--<router-link to="/">Construccion</router-link>
-      <router-link to="/registro">Registro</router-link>
-      <router-link to="/confirmacorreo">Confirma correo</router-link>
-      <router-link to="/confirmacorreoexito">Confirma correo Éxito</router-link>
-      <router-link to="/boletodiauno">Boleto 29 sep</router-link>
-      <router-link to="/boletodiados">Boleto 30 sep</router-link>
-      <router-link to="/boletodiatres">Boleto 1 oct</router-link>
-      <router-link to="/boletodiacuatro">Boleto 2 oct</router-link>
-      <router-link to="/boletodiacinco">Boleto 3 oct</router-link>
-      <router-link to="/boletodiaseis">Boleto 4 oct</router-link>
-      <router-link to="/consumoapi">API</router-link>-->
-    </nav>
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 <style>

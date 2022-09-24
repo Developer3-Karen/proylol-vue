@@ -152,6 +152,8 @@ export default {
   },
   mounted() {
     console.log('hola desde mounted');
+    console.log('hola desde mounted 3');
+    console.log(this.$route.path);
   },
   methods: {
     submit() {
@@ -164,7 +166,7 @@ export default {
       console.log(this.form);
       /* eslint-disable */
       axios
-        .post('http://ec2-54-166-73-38.compute-1.amazonaws.com/usuario', article, {
+        .post('https://worlds2022.herokuapp.com/usuario', article, {
           headers: {
             'content-type': 'application/json',
           },
@@ -174,7 +176,7 @@ export default {
             alert(response.data.mensaje);
           } else {
             alert('Se ha generado correctamente el usuario');
-            this.$router.push('/confirmaCorreo')
+            this.$router.push({ path: '/confirmaCorreo' });
           }
         })
         .catch((error) => {

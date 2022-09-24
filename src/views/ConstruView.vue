@@ -7,8 +7,9 @@
     <img class="pWorlds2022" alt="Worlds 2022" src="../assets/worlDs_cdmx_2022.png">
     <center>
             <!-- eslint-disable-next-line max-len -->
-      <b-button style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 230px; border: none; font-size: 20px; font-family: 'PPFraktionSans-Bold';" href="/">REGÍSTRATE</b-button>
+      <b-button type="submit" v-on:click="submit" style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 230px; border: none; font-size: 20px; font-family: 'PPFraktionSans-Bold';" >REGÍSTRATE</b-button>
     </center>
+
     <div class="footer">
       <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png">
     </div>
@@ -98,6 +99,15 @@ export default {
   name: 'ConstruView',
   components: {
     // HelloWorld,
+  },
+  mounted() {
+    console.log('hola desde mounted 2');
+    console.log(this.$route.path);
+  },
+  methods: {
+    submit() {
+      this.$router.push({ path: '/registro' });
+    },
   },
 };
 </script>
