@@ -32,7 +32,6 @@
           <b-col >
           <!-- eslint-disable-next-line max-len -->
             <b-button type="submit" v-on:click="submit" style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">Verificar</b-button>
-            <center><button @click="exportToPDF" class="btn-descarga" hidden>boton</button></center>
           </b-col>
         </b-row>
       </b-container>
@@ -178,8 +177,32 @@ export default {
           if (response.data.code === 500) {
             alert(response.data.mensaje);
           } else {
-            alert('Se ha generado correctamente el usuario');
-            this.$router.push('/confirmaCorreo')
+            const postar = {'codigo_acceso': this.codigo_acceso}
+            axios.post('https://worlds2022.herokuapp.com/generarBoleto',postar, {
+              headers: {
+                'content-type': 'application/json',
+              },
+            })
+            .then((response) => {
+              if (response.data.code === 500) {
+                alert(response.data.mensaje);
+              } else {
+                console.log(response)
+                this.pdf.codigo = response.data.data[0].codigo_acceso;
+                this.pdf.fecha = response.data.data[0].fecha;
+                this.pdf.hora = response.data.data[0].hora_inicio;
+                html2pdf(document.getElementById('element-to-convert'), {
+                  margin: 0,
+                  filename: 'boleto.pdf',
+                });
+                alert('Se ha generado correctamente el usuario');
+                this.$router.push('/confirmaCorreo')
+              }
+            })
+            .catch((error) => {
+              console.log('error' + error.data.mensaje);
+              alert('No existe el cupon');
+            });
           }
         })
         .catch((error) => {
@@ -188,31 +211,6 @@ export default {
         });
     },
     exportToPDF() {
-      const postar = {'codigo_acceso': this.codigo_acceso}
-        axios.post('https://worlds2022.herokuapp.com/generarBoleto',postar, {
-          headers: {
-            'content-type': 'application/json',
-          },
-        })
-        .then((response) => {
-          if (response.data.code === 500) {
-            alert(response.data.mensaje);
-          } else {
-            console.log(response)
-            this.pdf.codigo = response.data.data[0].codigo_acceso;
-            this.pdf.fecha = response.data.data[0].fecha;
-            this.pdf.hora = response.data.data[0].hora_inicio;
-            html2pdf(document.getElementById('element-to-convert'), {
-              margin: 0,
-              filename: 'boleto.pdf',
-            });
-            alert('Se ha generado correctamente el usuario');  
-          }
-        })
-        .catch((error) => {
-          console.log('error' + error.data.mensaje);
-          alert('No existe el cupon');
-        });
        },
   },
 };
