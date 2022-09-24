@@ -12,6 +12,9 @@
     "bootstrap": "5.0",
     "bootstrap-vue": "^2.22.0",
     "core-js": "^3.8.3",
+    "html2pdf.js": "^0.10.1",
+    "pinia": "^2.0.21",
+    "jspdf": "^2.5.1",
     "vue": "^2.7.10",
     "vue-router": "^3.5.1"
   },
