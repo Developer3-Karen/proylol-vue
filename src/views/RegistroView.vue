@@ -185,7 +185,7 @@ export default {
       console.log(this.form);
       /* eslint-disable */
       axios
-        .post('http://ec2-54-166-73-38.compute-1.amazonaws.com/usuario', article, {
+        .post('https://worlds2022.herokuapp.com/usuario', article, {
           headers: {
             'content-type': 'application/json',
           },
