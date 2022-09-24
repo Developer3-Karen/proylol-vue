@@ -16,8 +16,8 @@
         font-size: 20px;
         font-family: 'PPFraktionSans-Bold';
       "
-      href="/registro"
-      >REGÍSTRATE</b-button
+      type="submit" v-on:click="submit"
+      >REGÍSTRATEsss</b-button
     >
     <div class="footer">
       <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png" />
@@ -221,9 +221,18 @@ b-button {
 // import HelloWorld from '@/components/HelloWorld.vue';
 
 export default {
-  name: 'HomeView',
+  name: 'ConstruView',
   components: {
     // HelloWorld,
+  },
+  mounted() {
+    console.log('hola desde mounted 2');
+    console.log(this.$route.path);
+  },
+  methods: {
+    submit() {
+      this.$router.push({ path: '/registro' });
+    },
   },
 };
 </script>

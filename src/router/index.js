@@ -1,109 +1,33 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Router from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import Registro from '../views/RegistroView.vue';
+import ConfirmarCorreo from '../views/ConfirmaCorreoView.vue';
+import BoletoDiaUno from '../views/BoletoDiaUnoView.vue';
 
-Vue.use(VueRouter);
+Vue.use(Router);
 
-const routes = [
-  {
-    path: '/',
-    name: 'home',
-    component: HomeView,
-  },
-  {
-    path: '/inicioregistro',
-    name: 'inicioregistro',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ConstruView.vue'),
-  },
-  {
-    path: '/registro',
-    name: 'registro',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/RegistroView.vue'),
-  },
-  {
-    path: '/confirmacorreo',
-    name: 'confirmacorreo',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ConfirmaCorreoView.vue'),
-  },
-  {
-    path: '/confirmacorreoexito',
-    name: 'confirmacorreoexito',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ConfirmaCorreoExitoView.vue'),
-  },
-  {
-    path: '/boletodiauno',
-    name: 'boletodiauno',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaUnoView.vue'),
-  },
-  {
-    path: '/boletodiados',
-    name: 'boletodiados',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaDosView.vue'),
-  },
-  {
-    path: '/boletodiatres',
-    name: 'boletodiatres',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaTresView.vue'),
-  },
-  {
-    path: '/boletodiacuatro',
-    name: 'boletodiacuatro',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaCuatroView.vue'),
-  },
-  {
-    path: '/boletodiacinco',
-    name: 'boletodiacinco',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaCincoView.vue'),
-  },
-  {
-    path: '/boletodiaseis',
-    name: 'boletodiaseis',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaSeisView.vue'),
-  },
-  {
-    path: '/consumoapi',
-    name: 'consumoapi',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/consumoView.vue'),
-  },
-];
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes,
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: HomeView,
+    },
+    {
+      path: '/registro',
+      name: 'registro',
+      component: Registro,
+    },
+    {
+      path: '/confirmaCorreo',
+      name: 'confirmaCorreo',
+      component: ConfirmarCorreo,
+    },
+    {
+      path: '/boleto',
+      name: 'boleto',
+      component: BoletoDiaUno,
+    },
+  ],
 });
-
-export default router;
