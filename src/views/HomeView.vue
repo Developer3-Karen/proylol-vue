@@ -17,7 +17,7 @@
         font-family: 'PPFraktionSans-Bold';
       "
       type="submit" v-on:click="submit"
-      >REGÍSTRATEsss</b-button
+      >REGÍSTRATE</b-button
     >
     <div class="footer">
       <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png" />
