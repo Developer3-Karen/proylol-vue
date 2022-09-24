@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
+    <!-- eslint-disable-next-line max-len -->
+    <img class="logoWorlds2022" alt="Worlds 2022 logo" style="margin-top:100px;" src="../assets/2LOGO2.png">
     <br>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 

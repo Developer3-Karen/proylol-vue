@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png" />
+     <!-- eslint-disable-next-line max-len -->
+    <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png" style="margin-top:80px;" />
     <br />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 
@@ -15,9 +16,10 @@
         border: none;
         font-size: 20px;
         font-family: 'PPFraktionSans-Bold';
+        margin-top: 40px;
       "
       type="submit" v-on:click="submit"
-      >REGÍSTRATEsss</b-button
+      >REGÍSTRATE</b-button
     >
     <div class="footer">
       <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png" />
