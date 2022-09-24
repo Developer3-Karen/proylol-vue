@@ -26,6 +26,78 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/RegistroView.vue'),
   },
+  {
+    path: '/confirmacorreo',
+    name: 'confirmacorreo',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/ConfirmaCorreoView.vue'),
+  },
+  {
+    path: '/confirmacorreoexito',
+    name: 'confirmacorreoexito',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/ConfirmaCorreoExitoView.vue'),
+  },
+  {
+    path: '/boletodiauno',
+    name: 'boletodiauno',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaUnoView.vue'),
+  },
+  {
+    path: '/boletodiados',
+    name: 'boletodiados',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaDosView.vue'),
+  },
+  {
+    path: '/boletodiatres',
+    name: 'boletodiatres',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaTresView.vue'),
+  },
+  {
+    path: '/boletodiacuatro',
+    name: 'boletodiacuatro',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaCuatroView.vue'),
+  },
+  {
+    path: '/boletodiacinco',
+    name: 'boletodiacinco',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaCincoView.vue'),
+  },
+  {
+    path: '/boletodiaseis',
+    name: 'boletodiaseis',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/BoletoDiaSeisView.vue'),
+  },
+  {
+    path: '/consumoapi',
+    name: 'consumoapi',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/consumoView.vue'),
+  },
 ];
 
 const router = new VueRouter({
