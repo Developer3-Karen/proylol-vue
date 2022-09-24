@@ -3,7 +3,7 @@
     <h1 style="color: #321bdd;">Descarga tu boleto</h1>
     <!-- eslint-disable-next-line max-len -->
     <center><button @click="exportToPDF" class="btn-descarga">boton</button></center>
-    <div id="element-to-convert">
+    <div id="12341412">
       <div class="boletodiatres">
         <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
         <br />
@@ -43,7 +43,7 @@ export default {
   name: 'app',
   methods: {
     exportToPDF() {
-      html2pdf(document.getElementById('element-to-convert'), {
+      html2pdf(document.getElementById('element-to-123412421convert'), {
         margin: 0,
         filename: 'boleto.pdf',
       });

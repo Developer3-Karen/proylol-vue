@@ -36,41 +36,7 @@
         </b-row>
       </b-container>
     </section>
-    <div id="element-to-convert" style="display:none;" >
-      <div class="boletodiatres">
-        <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
-        <br />
-        <center>
-        <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-        <img src="../assets/Capa 1.png" alt="" style="height: 431px; width: auto;">
-        <!-- eslint-disable-next-line max-len -->
-        <p style="color: #F2F2F2; font-size: 20px; margin-top: 10px; font-family: 'Manuka-Bold';">TOKEM1029288</p>
-        <!-- eslint-disable-next-line max-len -->
-        <p style="color: #F2F2F2; font-size: 20px; margin-top: 10px; font-family: 'Manuka-Bold'">Fecha</p>
-          <!-- eslint-disable-next-line max-len -->
-          <p style="font-family: 'Manuka-Bold'; margin-top:10px;width: 540px; height: 40px; background-color: #321BDD; border-radius: 20px; color: #F2F2F2; text-align: center; padding-top: 8px; font-size: 20px;">1 DE OCTUBRE DEL 2022</p>
-          <!-- eslint-disable-next-line max-len -->
-          <p style="font-family: 'Manuka-Bold'; color: #F2F2F2; font-size: 20px;">Hora</p>
-          <!-- eslint-disable-next-line max-len -->
-          <p style="font-family: 'Manuka-Bold'; width: 540px; margin-top:10px; height: 40px; background-color: #321BDD; border-radius: 20px; color: #F2F2F2; text-align: center; padding-top: 8px; font-size: 20px;">12:00 a 22:00 hrs</p>
-          <!-- eslint-disable-next-line max-len -->
-          <p style="font-family: 'Manuka-Bold'; color: #F2F2F2; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
-            Lugar: Centro Cultural Estación Indianilla <br>
-            Dirección: Claudio Bernard 111, Doctores, Cuauhtémoc,<br> 06720 Ciudad de México, CDMX
-          </p>
-        <br>
-        <img class="pWorlds2022" alt="Worlds 2022" src="../assets/worlDs_cdmx_2022.png">
-        <br><br>
-          </center>
-        <div class="footer">
-          <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png">
-        </div>
-      </div>
-    </div>
-    <div class="footer">
-      <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png">
-    </div>
-    <div id="app" ref="document" style="display:none" >
+    <div id="app" ref="document" style="display:none;" >
       <h1 style="color: #321bdd;">Descarga tu boleto</h1>
       <!-- eslint-disable-next-line max-len -->
       <center><button @click="exportToPDF" class="btn-descarga">boton</button></center>
@@ -80,41 +46,17 @@
           <br />
           <center>
           <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-          <img src="../assets/Capa 1.png" alt="" style="height: 431px; width: auto;">
+          <img :src="getImgUrl()" alt="" style="height: 431px; width: auto;">
           <!-- eslint-disable-next-line max-len -->
-          <p style="color: #F2F2F2; font-size: 20px; margin-top: 10px; font-family: 'Manuka-Bold';"></p>
-          <b-form-input
-                id="input-1"
-                style="
-                  border-radius: 50px;
-                  text-align: left;
-                  font-size: 20px;
-                  font-family: 'PPFraktionSans-Bold';
-                "
-                v-model="pdf.fecha"
-                :state="state"
-                trim
-              ></b-form-input>
+          <b-form-input  v-model="codigo_acceso"></b-form-input>
           <!-- eslint-disable-next-line max-len -->
           <p style="color: #F2F2F2; font-size: 20px; margin-top: 10px; font-family: 'Manuka-Bold'">Fecha</p>
             <!-- eslint-disable-next-line max-len -->
-            <p style="font-family: 'Manuka-Bold'; margin-top:10px;width: 540px; height: 40px; background-color: #321BDD; border-radius: 20px; color: #F2F2F2; text-align: center; padding-top: 8px; font-size: 20px;">1 DE OCTUBRE DEL 2022</p>
+            <b-form-input  v-model="pdf.fecha"></b-form-input>
             <!-- eslint-disable-next-line max-len -->
             <p style="font-family: 'Manuka-Bold'; color: #F2F2F2; font-size: 20px;">Hora</p>
-            <b-form-input
-                id="input-1"
-                style="
-                  border-radius: 50px;
-                  text-align: left;
-                  font-size: 20px;
-                  font-family: 'PPFraktionSans-Bold';
-                "
-                v-model="pdf.hora"
-                :state="state"
-                trim
-              ></b-form-input>
             <!-- eslint-disable-next-line max-len -->
-            <p style="font-family: 'Manuka-Bold'; width: 540px; margin-top:10px; height: 40px; background-color: #321BDD; border-radius: 20px; color: #F2F2F2; text-align: center; padding-top: 8px; font-size: 20px;">12:00 a 22:00 hrs</p>
+            <b-form-input  v-model="pdf.hora_final"></b-form-input>
             <!-- eslint-disable-next-line max-len -->
             <p style="font-family: 'Manuka-Bold'; color: #F2F2F2; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
               Lugar: Centro Cultural Estación Indianilla <br>
@@ -150,15 +92,16 @@ export default {
         fecha: '',
         hora: '',
         hora_fin: '',
+        hora_final: '',
+        qr: '',
       },
     };
   },
   methods: {
-    exportToPDF() {
-      html2pdf(document.getElementById('element-to-convert'), {
-        margin: 0,
-        filename: 'boleto.pdf',
-      });
+    getImgUrl() {
+      console.log('Entre a la imagen');
+      console.log(this.pdf.qr);
+      return this.pdf.qr;
     },
     submit() {
       const article = {
@@ -191,12 +134,15 @@ export default {
                 this.pdf.codigo = response.data.data[0].codigo_acceso;
                 this.pdf.fecha = response.data.data[0].fecha;
                 this.pdf.hora = response.data.data[0].hora_inicio;
+                this.pdf.hora = response.data.data[0].hora_fin;
+                this.pdf.hora_final = response.data.data[0].hora_inicio + " a " + response.data.data[0].hora_fin;
+                this.pdf.qr = response.data.base64;
+                console.log(this.pdf.qr)
                 html2pdf(document.getElementById('element-to-convert'), {
                   margin: 0,
                   filename: 'boleto.pdf',
                 });
                 alert('Se ha generado correctamente el usuario');
-                this.$router.push('/confirmaCorreo')
               }
             })
             .catch((error) => {
