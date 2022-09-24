@@ -24,14 +24,14 @@
             <center>
           <b-col cols="12" md="6" lg="4">
           <!-- eslint-disable-next-line max-len -->
-            <b-form-input style="border-radius: 50px; text-align:center; font-family: 'PPFraktionSans-Bold'; font-size: 20px;" placeholder="Escribe tu código de confirmación"></b-form-input>
+            <b-form-input  v-model="codigo_acceso" style="border-radius: 50px; text-align:center; font-family: 'PPFraktionSans-Bold'; font-size: 20px;" placeholder="Escribe tu código de confirmación"></b-form-input>
           </b-col>
            </center>
         </b-row>
         <b-row >
           <b-col >
           <!-- eslint-disable-next-line max-len -->
-            <b-button style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">CONFIRMAR CORREO</b-button>
+            <b-button type="submit" v-on:click="submit" style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">CONFIRMAR CORREO</b-button>
           </b-col>
         </b-row>
       </b-container>
@@ -42,10 +42,46 @@
   </div>
 </template>
 <script>
+
+import axios from 'axios';
+
 export default {
   name: 'ConfirmaCorreoView',
   components: {
     // HelloWorld
+  },
+  data() {
+    return {
+      codigo_acceso: '',
+    };
+  },
+  methods: {
+    submit() {
+      const article = {
+        codigo_acceso: this.codigo_acceso,
+      };
+      console.log('Form');
+      console.log(this.form);
+      /* eslint-disable */
+      axios
+        .post('http://ec2-54-166-73-38.compute-1.amazonaws.com/confirmarCodigo', article, {
+          headers: {
+            'content-type': 'application/json',
+          },
+        })
+        .then((response) => {
+          if (response.data.code === 500) {
+            alert(response.data.mensaje);
+          } else {
+            alert('Se ha generado correctamente el usuario');
+            this.$router.push('/confirmaCorreo')
+          }
+        })
+        .catch((error) => {
+          console.log('error' + error.data.mensaje);
+          alert('No existe el cupon');
+        });
+    },
   },
 };
 </script>

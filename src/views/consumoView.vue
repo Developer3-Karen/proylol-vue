@@ -54,7 +54,7 @@ export default {
         email: this.form.email,
       };
       /* eslint-disable */
-      axios.post('http://127.0.0.1:3000/usuario', article
+      axios.post('http://ec2-54-166-73-38.compute-1.amazonaws.com/usuario', article
       , {
         headers: {
             'content-type': 'application/json'
