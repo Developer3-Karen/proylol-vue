@@ -22,7 +22,7 @@
       >REGÍSTRATE</b-button
     >
     <div class="footer">
-      <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png" />
+      <img class="decora" alt="Worlds 2022" src="https://tes.opl.worldscdmx2022.com/ELEMENTO%20DE%20DECORACION%20(1).png" />
     </div>
   </div>
 </template>
@@ -48,7 +48,7 @@
 body {
   font-weight: bold;
   font-family: 'PPFraktionSans-Bold';
-  background-image: url('https://tes.opl.worldscdmx2022.com/fondo%2001.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/fondo.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -92,7 +92,7 @@ section {
   width: 313px;
 }
 header {
-  background-image: url('../assets/Rectángulo 3 copia.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/Rect%a0ngulo%203%20copia%20-%20copia.png');
   /* margin-bottom: 20px; */
   margin: 0;
   padding-right: 0em;

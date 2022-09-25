@@ -1,8 +1,8 @@
 <template>
   <div class="confirmacorreo">
         <header>
-      <img class="img-world-logo" src="../assets/logo 01.png" alt="">
-      <img class="img-world-cdmx" src="../assets/worlDs_cdmx_2022.png" alt="">
+      <img class="img-world-logo" src="https://tes.opl.worldscdmx2022.com/logo%2001.png" alt="">
+      <img class="img-world-cdmx" src="https://tes.opl.worldscdmx2022.com/worlDs_cdmx_2022.png" alt="">
     </header>
     <section style="padding-top: 80px; " >
       <b-container class="bv-example-row">
@@ -43,7 +43,7 @@
       <div id="element-to-convert">
         <div class="boletodiatres">
           <div style="text-align: center;">
-            <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
+            <img class="logoWorlds2022" alt="Worlds 2022 logo" src="https://tes.opl.worldscdmx2022.com/2LOGO2.png">
           </div>
           <br />
           <center>
@@ -90,11 +90,11 @@
               Dirección: Claudio Bernard 111, Doctores, Cuauhtémoc,<br> 06720 Ciudad de México, CDMX
             </p>
           <br>
-          <img class="pWorlds2022" alt="Worlds 2022" src="../assets/worlDs_cdmx_2022.png">
+          <img class="pWorlds2022" alt="Worlds 2022" src="https://tes.opl.worldscdmx2022.com/worlDs_cdmx_2022.png">
           <br><br>
             </center>
           <div class="footer">
-            <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png">
+            <img class="decora" alt="Worlds 2022" src="https://tes.opl.worldscdmx2022.com/ELEMENTO%20DE%20DECORACION%20(1).png">
           </div>
         </div>
       </div>
