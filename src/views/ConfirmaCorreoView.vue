@@ -4,7 +4,7 @@
       <img class="img-world-logo" src="https://tes.opl.worldscdmx2022.com/logo%2001.png" alt="">
       <img class="img-world-cdmx" src="https://tes.opl.worldscdmx2022.com/worlDs_cdmx_2022.png" alt="">
     </header>
-    <section style="padding-top: 80px; " >
+    <section style="padding-top: 80px; ">
       <b-container class="bv-example-row">
         <b-row>
           <b-col>
@@ -43,7 +43,7 @@
       <div id="element-to-convert">
         <div class="boletodiatres">
           <div style="text-align: center;">
-            <img class="logoWorlds2022" alt="Worlds 2022 logo" src="https://tes.opl.worldscdmx2022.com/2LOGO2.png">
+            <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
           </div>
           <br />
           <center>

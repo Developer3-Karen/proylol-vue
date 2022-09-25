@@ -103,7 +103,7 @@ header {
   background-image: url('https://tes.opl.worldscdmx2022.com/fondo%2001.png');
 }
 .correoexito {
-  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/fboton.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -141,7 +141,7 @@ b-button {
   background-size: cover;
 }
 .boletodiatres {
-  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
+  background-image: url('../assets/landing_0000s_0004_FINALS.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
