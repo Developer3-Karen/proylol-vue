@@ -1,11 +1,11 @@
 <template>
   <div class="home">
      <!-- eslint-disable-next-line max-len -->
-    <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png" style="margin-top:80px;" />
+    <img class="logoWorlds2022" alt="Worlds 2022 logo" src="https://tes.opl.worldscdmx2022.com/2LOGO2.png" style="margin-top:80px;" />
     <br />
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 
-    <img class="pWorlds2022" alt="Worlds 2022" src="../assets/worlDs_cdmx_2022.png" />
+    <img class="pWorlds2022" alt="Worlds 2022" src="https://tes.opl.worldscdmx2022.com/worlDs_cdmx_2022.png" />
     <br/>
     <b-button
       style="
@@ -48,14 +48,14 @@
 body {
   font-weight: bold;
   font-family: 'PPFraktionSans-Bold';
-  background-image: url(../assets/fondo.png);
+  background-image: url('https://tes.opl.worldscdmx2022.com/fondo%2001.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 section {
-  background-image: url('../assets/fondo 01.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/fondo%2001.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -100,10 +100,10 @@ header {
   width: 100%;
 }
 .form {
-  background-image: url('../assets/fondo 01.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/fondo%2001.png');
 }
 .correoexito {
-  background-image: url('../assets/landing_0000s_0004_FINALS.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -127,42 +127,42 @@ b-button {
   text-align: center;
 }
 .boletodiauno {
-  background-image: url('../assets/landing_0000s_0004_FINALS.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .boletodiados {
-  background-image: url('../assets/landing_0000s_0004_FINALS.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .boletodiatres {
-  background-image: url('../assets/landing_0000s_0004_FINALS.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .boletodiacuatro {
-  background-image: url('../assets/landing_0000s_0004_FINALS.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .boletodiacinco {
-  background-image: url('../assets/landing_0000s_0004_FINALS.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .boletodiaseis {
-  background-image: url('../assets/landing_0000s_0004_FINALS.png');
+  background-image: url('https://tes.opl.worldscdmx2022.com/landing_0000s_0004_FINALS.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
