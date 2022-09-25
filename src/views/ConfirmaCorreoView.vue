@@ -16,7 +16,7 @@
             <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px; margin-bottom: 2px;">tu código de registro y da clic en el botón verificar.</p>
             <center>
             <!-- eslint-disable-next-line max-len -->
-            <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px; padding-top:20px;">Escribe a continuación tu código:</p>
+            <p style="color: #F2F2F2; font-family: 'PPFraktionSans-Bold'; font-size: 20px; padding-top: 20px;">Escribe a continuación tu código:</p>
             </center>
           </b-col>
         </b-row>
@@ -42,21 +42,48 @@
       <center><button @click="exportToPDF" class="btn-descarga">boton</button></center>
       <div id="element-to-convert">
         <div class="boletodiatres">
-          <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
+          <div style="text-align: center;">
+            <img class="logoWorlds2022" alt="Worlds 2022 logo" src="../assets/2LOGO2.png">
+          </div>
           <br />
           <center>
           <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-          <img :src="getImgUrl()" alt="" style="height: 431px; width: auto;">
+          <img :src="getImgUrl()" alt="" style="height: 331px; width: auto; margin-bottom: 6px;">
           <!-- eslint-disable-next-line max-len -->
-          <b-form-input  v-model="codigo_acceso"></b-form-input>
+          <b-form-input style="
+                  text-align: center;
+                  font-family: 'PPFraktionSans-Bold';
+                  font-size: 20px;
+                  color: #f2f2f2;
+                  background-color:transparent;
+                  border: none;
+                "  v-model="codigo_acceso"></b-form-input>
           <!-- eslint-disable-next-line max-len -->
-          <p style="color: #F2F2F2; font-size: 20px; margin-top: 10px; font-family: 'Manuka-Bold'">Fecha</p>
+          <p style="color: #F2F2F2; font-size: 30px; margin-top: 5px; font-family: 'PPFraktionSans-Bold';">FECHA</p>
             <!-- eslint-disable-next-line max-len -->
-            <b-form-input  v-model="pdf.fecha"></b-form-input>
+            <b-form-input style="
+                  border-radius: 50px;
+                  text-align: center;
+                  font-family: 'PPFraktionSans-Bold';
+                  font-size: 20px;
+                  background-color: #321bdd;
+                  color: #f2f2f2;
+                  height: 40px;
+                  width: 500px;
+                "   v-model="pdf.fecha"></b-form-input>
             <!-- eslint-disable-next-line max-len -->
-            <p style="font-family: 'Manuka-Bold'; color: #F2F2F2; font-size: 20px;">Hora</p>
+            <p style ="color: #F2F2F2; font-size: 30px; margin-top: 5px; font-family: 'PPFraktionSans-Bold';">HORA</p>
             <!-- eslint-disable-next-line max-len -->
-            <b-form-input  v-model="pdf.hora_final"></b-form-input>
+            <b-form-input style="
+                  border-radius: 50px;
+                  text-align: center;
+                  font-family: 'PPFraktionSans-Bold';
+                  font-size: 20px;
+                  background-color: #321bdd;
+                  color: #f2f2f2;
+                  height: 40px;
+                  width: 500px;
+                "  v-model="pdf.hora_final"></b-form-input>
             <!-- eslint-disable-next-line max-len -->
             <p style="font-family: 'Manuka-Bold'; color: #F2F2F2; font-size: 20px; margin-top: 10px; margin-bottom: 10px;">
               Lugar: Centro Cultural Estación Indianilla <br>
