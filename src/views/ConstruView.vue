@@ -1,25 +1,25 @@
 <template>
   <div class="home">
     <!-- eslint-disable-next-line max-len -->
-    <img class="logoWorlds2022" alt="Worlds 2022 logo" style="margin-top:100px;" src="../assets/2LOGO2.png">
+    <img class="logoWorlds2022" alt="Worlds 2022 logo" style="margin-top:100px;" src="https://tes.opl.worldscdmx2022.com/2LOGO2.png">
     <br>
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 
-    <img class="pWorlds2022" alt="Worlds 2022" src="../assets/worlDs_cdmx_2022.png">
+    <img class="pWorlds2022" alt="Worlds 2022" src="https://tes.opl.worldscdmx2022.com/worlDs_cdmx_2022.png">
     <center>
             <!-- eslint-disable-next-line max-len -->
       <b-button type="submit" v-on:click="submit" style="background-color: #321BDD; border-radius: 30px; height: 50px; width: 230px; border: none; font-size: 20px; font-family: 'PPFraktionSans-Bold';" >REGÍSTRATE</b-button>
     </center>
 
     <div class="footer">
-      <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png">
+      <img class="decora" alt="Worlds 2022" src="https://tes.opl.worldscdmx2022.com/ELEMENTO%20DE%20DECORACION%20(1).png">
     </div>
   </div>
 </template>
 
 <style>
 body{
-  background-image: url(../assets/fondo.png);
+  background-image: url('https://tes.opl.worldscdmx2022.com/fondo.png');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -50,12 +50,12 @@ body{
   float: right;
 } */
 main{
-    background-image: url("../assets/Rectángulo 3 copia.png");
+    background-image: url("https://tes.opl.worldscdmx2022.com/Rect%a0ngulo%203%20copia%20-%20copia.png");
     padding: 20px;
     margin: 20px;
 }
 .form{
-    background-image: url("../assets/fondo 01.png");
+    background-image: url("https://tes.opl.worldscdmx2022.com/fondo%2001.png");
 }
 .btn-registrate{
   border-radius: 5px;
