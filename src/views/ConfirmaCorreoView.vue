@@ -241,40 +241,8 @@ export default {
       /* const article = {
         codigo_acceso: this.codigo_acceso,
       }; */
-      const postar = { codigo_acceso: this.codigo_acceso };
-      axios
-        .post('https://worlds2022.herokuapp.com/generarBoleto', postar, {
-          headers: {
-            'content-type': 'application/json',
-          },
-        })
-        .then((response) => {
-          if (response.data.code === 500) {
-            alert(response.data.mensaje);
-          } else {
-            console.log(response);
-            this.pdf.codigo = response.data.data[0].codigo_acceso;
-            this.pdf.fecha = response.data.data[0].fecha;
-            this.pdf.hora = response.data.data[0].hora_inicio;
-            this.pdf.hora = response.data.data[0].hora_fin;
-            this.pdf.qr = response.data.base64;
-            this.pdf.fecha = this.pdf.fecha.substring(0, 10);
-            /* eslint-disable */
-            this.pdf.hora_final = response.data.data[0].hora_inicio.substring(0, 5) + " a " + response.data.data[0].hora_fin.substring(0, 5);
-            html2pdf(document.getElementById('element-to-convert'), {
-              margin: 0,
-              filename: 'boleto.pdf',
-            });
-            alert('Se ha generado correctamente el usuario');
-          }
-        })
-        .catch((error) => {
-          /* eslint-disable */
-          console.log('error' + error.data.mensaje);
-          alert('No existe el cupon');
-        });
       /* eslint-disable */
-      /*axios
+      axios
         .post('https://worlds2022.herokuapp.com/confirmarCodigo', article, {
           headers: {
             'content-type': 'application/json',
@@ -284,41 +252,44 @@ export default {
           if (response.data.code === 500) {
             alert(response.data.mensaje);
           } else {
-            const postar = {'codigo_acceso': this.codigo_acceso}
-            axios.post('https://worlds2022.herokuapp.com/generarBoleto',postar, {
-              headers: {
-                'content-type': 'application/json',
-              },
-            })
-            .then((response) => {
-              if (response.data.code === 500) {
-                alert(response.data.mensaje);
-              } else {
-                console.log(response)
-                this.pdf.codigo = response.data.data[0].codigo_acceso;
-                this.pdf.fecha = response.data.data[0].fecha;
-                this.pdf.hora = response.data.data[0].hora_inicio;
-                this.pdf.hora = response.data.data[0].hora_fin;
-                this.pdf.hora_final = response.data.data[0].hora_inicio + " a " + response.data.data[0].hora_fin;
-                this.pdf.qr = response.data.base64;
-                console.log(this.pdf.qr)
-                html2pdf(document.getElementById('element-to-convert'), {
-                  margin: 0,
-                  filename: 'boleto.pdf',
-                });
-                alert('Se ha generado correctamente el usuario');
-              }
-            })
-            .catch((error) => {
-              console.log('error' + error.data.mensaje);
-              alert('No existe el cupon');
-            });
+            const postar = { codigo_acceso: this.codigo_acceso };
+            axios
+              .post('https://worlds2022.herokuapp.com/generarBoleto', postar, {
+                headers: {
+                  'content-type': 'application/json',
+                },
+              })
+              .then((response) => {
+                if (response.data.code === 500) {
+                  alert(response.data.mensaje);
+                } else {
+                  console.log(response);
+                  this.pdf.codigo = response.data.data[0].codigo_acceso;
+                  this.pdf.fecha = response.data.data[0].fecha;
+                  this.pdf.hora = response.data.data[0].hora_inicio;
+                  this.pdf.hora = response.data.data[0].hora_fin;
+                  this.pdf.qr = response.data.base64;
+                  this.pdf.fecha = this.pdf.fecha.substring(0, 10);
+                  /* eslint-disable */
+                  this.pdf.hora_final = response.data.data[0].hora_inicio.substring(0, 5) + " a " + response.data.data[0].hora_fin.substring(0, 5);
+                  html2pdf(document.getElementById('element-to-convert'), {
+                    margin: 0,
+                    filename: 'boleto.pdf',
+                  });
+                  alert('Se ha generado correctamente el usuario');
+                }
+              })
+              .catch((error) => {
+                /* eslint-disable */
+                console.log('error' + error.data.mensaje);
+                alert('No existe el cupon');
+              });
           }
         })
         .catch((error) => {
           console.log('error' + error.data.mensaje);
           alert('No existe el cupon');
-        });*/
+        });
     },
     exportToPDF() {},
   },
