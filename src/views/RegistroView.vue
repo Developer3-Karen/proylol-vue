@@ -162,7 +162,7 @@ export default {
     // eslint-disable-next-line
      validateStateNombre(name) {
       // eslint-disable-next-line
-      const reg = /^[a-zA-Z]+$/;
+      const reg = /^[ÁÉÍÓÚA-Z][a-záéíóú]+(\s+[ÁÉÍÓÚA-Z]?[a-záéíóú]+)*$/;
       const c = reg.test(name);
       // eslint-disable-next-line
       if(c) {
