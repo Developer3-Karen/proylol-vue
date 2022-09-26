@@ -112,7 +112,7 @@
               "
               type="submit" v-on:click="submit"
             >
-              REGÍSTRATE</b-button
+              REGÍSTRATssssE</b-button
             >
             <!-- </b-form> -->
           </b-col>
@@ -176,6 +176,14 @@ export default {
       console.log(this.form.email);
     },
     submit() {
+      const validateEmail = this.validateState(this.form.email);
+      const validateNombre = this.validateStateNombre(this.form.nombre);
+      if (!validateEmail) {
+        alert('Revisa por favor el campo de email');
+      }
+      if (!validateNombre) {
+        alert('Revisa por favor el campo de nombre');
+      }
       const article = {
         nombre: this.form.nombre,
         codigo_acceso: this.form.codigo_acceso,
