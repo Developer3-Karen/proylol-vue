@@ -112,7 +112,7 @@
               "
               type="submit" v-on:click="submit"
             >
-              REGÍSTRATssssE</b-button
+              REGÍSTRATE</b-button
             >
             <!-- </b-form> -->
           </b-col>
