@@ -20,7 +20,7 @@
                 <!-- eslint-disable-next-line max-len -->
                 <b-button type="submit" v-on:click="submit" style="font-family: 'PPFraktionSans-Bold'; background-color: #321BDD; border-radius: 15px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">Inicio</b-button>
             </b-col>
-            <div class="sectBlanco footer">
+            <div class=" footer">
                 <!-- eslint-disable-next-line max-len -->
                  <img class="decora" alt="Worlds 2022" src="../assets/Objeto inteligente vectorial_N.png"/>
             </div>

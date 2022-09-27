@@ -4,6 +4,10 @@ import HomeView from '../views/HomeView.vue';
 import Registro from '../views/RegistroView.vue';
 import ConfirmarCorreo from '../views/ConfirmaCorreoView.vue';
 import BoletoDiaUno from '../views/BoletoDiaUnoView.vue';
+import Vista2 from '../views/Vista2View.vue';
+import Vista3 from '../views/Vista3View.vue';
+import Vista4 from '../views/Vista4View.vue';
+import VistaLogin from '../views/VistaLoginView.vue';
 
 Vue.use(Router);
 
@@ -28,6 +32,26 @@ export default new Router({
       path: '/boleto',
       name: 'boleto',
       component: BoletoDiaUno,
+    },
+    {
+      path: '/vista2',
+      name: 'vista2',
+      component: Vista2,
+    },
+    {
+      path: '/vista3',
+      name: 'vista3',
+      component: Vista3,
+    },
+    {
+      path: '/vista4',
+      name: 'vista4',
+      component: Vista4,
+    },
+    {
+      path: '/VistaLogin',
+      name: 'VistaLogin',
+      component: VistaLogin,
     },
   ],
 });
