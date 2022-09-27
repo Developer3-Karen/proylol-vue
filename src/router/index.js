@@ -36,12 +36,11 @@ export default new Router({
       component: BoletoDiaUno,
     },
     {
-<<<<<<< HEAD
       path: '/control',
       name: 'control',
       component: Control,
     },
-=======
+    {
       path: '/vista2',
       name: 'vista2',
       component: Vista2,
@@ -66,7 +65,5 @@ export default new Router({
       name: 'lolregistrouno',
       component: LolEscaneoRegistroUno,
     },
-
->>>>>>> 08b40ce49424e80b35eb67a799c12023277409c3
   ],
 });
