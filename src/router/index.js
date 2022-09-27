@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue';
 import Registro from '../views/RegistroView.vue';
 import ConfirmarCorreo from '../views/ConfirmaCorreoView.vue';
 import BoletoDiaUno from '../views/BoletoDiaUnoView.vue';
+import Control from '../views/Control.vue';
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/boleto',
       name: 'boleto',
       component: BoletoDiaUno,
+    },
+    {
+      path: '/control',
+      name: 'control',
+      component: Control,
     },
   ],
 });

@@ -238,9 +238,9 @@ export default {
       return this.pdf.qr;
     },
     submit() {
-      /* const article = {
+      const article = {
         codigo_acceso: this.codigo_acceso,
-      }; */
+      };
       /* eslint-disable */
       axios
         .post('https://worlds2022.herokuapp.com/confirmarCodigo', article, {
