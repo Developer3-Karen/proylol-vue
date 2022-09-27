@@ -172,6 +172,22 @@ b-button {
   height: 40px;
   width: 50px;
 }
+.fon-regiuno{
+  background-image: url('../assets/fondo\ 01.png');
+  /* margin-bottom: 20px; */
+  margin: 0;
+  padding-right: 0em;
+  height: 130px;
+  width: 100%;
+}
+.section-fondo--registro{
+  background-image: url('../assets/landing_0000s_0004_FINALS.png');
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
 
 /*Responsivo para Moviles*/
 @media (max-width: 400px) {

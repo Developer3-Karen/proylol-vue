@@ -8,6 +8,7 @@ import Vista2 from '../views/Vista2View.vue';
 import Vista3 from '../views/Vista3View.vue';
 import Vista4 from '../views/Vista4View.vue';
 import VistaLogin from '../views/VistaLoginView.vue';
+import LolEscaneoRegistroUno from '../views/LolEscaneoRegistroView.vue';
 
 Vue.use(Router);
 
@@ -53,5 +54,11 @@ export default new Router({
       name: 'VistaLogin',
       component: VistaLogin,
     },
+    {
+      path: '/lolregistrouno',
+      name: 'lolregistrouno',
+      component: LolEscaneoRegistroUno,
+    },
+
   ],
 });

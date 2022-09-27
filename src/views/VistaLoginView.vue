@@ -11,7 +11,7 @@
             <b-col></b-col>
             <b-col cols="12"  lg="4">
                  <!-- eslint-disable-next-line max-len -->
-                 <h1 style="font-family: 'Manuka-Bold'; font-size:60px; color: #ffffff; margin-top: 60px; margin-bottom: 60px;">Ingresa tus datos de acceso</h1>
+                 <h1 style="font-family: 'Manuka-Bold'; font-size:40px; color: #ffffff; margin-top: 60px; margin-bottom: 60px;">Ingresa tus datos de acceso</h1>
               <!-- <b-form @submit="onSubmit" @reset="onReset" v-if="show"> -->
                 <!-- eslint-disable-next-line max-len -->
                 <b-form-input
@@ -58,7 +58,7 @@
                 "
                 type="submit" v-on:click="submit"
               >
-                REGÍSTRATE</b-button
+               INGRESAR</b-button
               >
               <!-- </b-form> -->
             </b-col>
