@@ -5,6 +5,11 @@ import Registro from '../views/RegistroView.vue';
 import ConfirmarCorreo from '../views/ConfirmaCorreoView.vue';
 import BoletoDiaUno from '../views/BoletoDiaUnoView.vue';
 import Control from '../views/Control.vue';
+import Vista2 from '../views/Vista2View.vue';
+import Vista3 from '../views/Vista3View.vue';
+import Vista4 from '../views/Vista4View.vue';
+import VistaLogin from '../views/VistaLoginView.vue';
+import LolEscaneoRegistroUno from '../views/LolEscaneoRegistroView.vue';
 
 Vue.use(Router);
 
@@ -31,9 +36,37 @@ export default new Router({
       component: BoletoDiaUno,
     },
     {
+<<<<<<< HEAD
       path: '/control',
       name: 'control',
       component: Control,
     },
+=======
+      path: '/vista2',
+      name: 'vista2',
+      component: Vista2,
+    },
+    {
+      path: '/vista3',
+      name: 'vista3',
+      component: Vista3,
+    },
+    {
+      path: '/vista4',
+      name: 'vista4',
+      component: Vista4,
+    },
+    {
+      path: '/VistaLogin',
+      name: 'VistaLogin',
+      component: VistaLogin,
+    },
+    {
+      path: '/lolregistrouno',
+      name: 'lolregistrouno',
+      component: LolEscaneoRegistroUno,
+    },
+
+>>>>>>> 08b40ce49424e80b35eb67a799c12023277409c3
   ],
 });

@@ -6,26 +6,32 @@
        </header>
            <div style="margin-top:60px;">
            <!-- eslint-disable-next-line max-len -->
-           <h1 style="font-family: 'Manuka-Bold'; font-size: 60px; color: #321bdd; margin-top: 60px; margin-bottom: 60px;">BOLETO USADO</h1>
+           <h1 style="font-family: 'Manuka-Bold'; font-size: 60px; color: white; margin-top: 60px; margin-bottom: 60px;">BOLETO USADO</h1>
            <!-- eslint-disable-next-line max-len -->
-           <h4 style="font-family: 'PPFraktionMono-Bold'; color: black;">EL BOLETO QUE TRATA DE INGRESAR NO EXISTE.<br /> FAVOR DE VERIFICAR.</h4>
+           <h4 style="font-family: 'PPFraktionMono-Bold'; color: white;">EL BOLETO QUE TRATA DE INGRESAR NO EXISTE.<br /> FAVOR DE VERIFICAR.</h4>
            <!-- eslint-disable-next-line max-len -->
            </div>
            <b-col >
                <!-- eslint-disable-next-line max-len -->
-               <b-button type="submit" v-on:click="submit" style="font-family: 'PPFraktionSans-Bold'; background-color: #321BDD; border-radius: 15px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">CONTINUAR ESCANEO</b-button>
+               <b-button type="submit" v-on:click="submit" style="font-family: 'PPFraktionSans-Bold'; background-color: #321BDD; border-radius: 30px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">CONTINUAR ESCANEO</b-button>
            </b-col>
            <b-col >
                <!-- eslint-disable-next-line max-len -->
-               <b-button type="submit" v-on:click="submit" style="font-family: 'PPFraktionSans-Bold'; background-color: #321BDD; border-radius: 15px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">INGRESO MANUAL</b-button>
-           </b-col>
-           <b-col >
-               <!-- eslint-disable-next-line max-len -->
-               <b-button type="submit" v-on:click="submit" style="font-family: 'PPFraktionSans-Bold'; background-color: #321BDD; border-radius: 15px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">INICIO</b-button>
+               <b-button type="submit" v-on:click="goToHome()" style="font-family: 'PPFraktionSans-Bold'; background-color: #321BDD; border-radius: 30px; height: 50px; width: 250px; border: none; font-size: 20px; margin-top: 20px;">INICIO</b-button>
            </b-col>
            <div class="sectBlanco footer">
                <!-- eslint-disable-next-line max-len -->
-                <img class="decora" alt="Worlds 2022" src="../assets/Objeto inteligente vectorial_N.png"/>
+                <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png"/>
            </div>
        </div>
 </template>
+<script>
+export default {
+  name: 'app',
+  methods: {
+    goToHome() {
+      this.$router.push('/VistaLogin');
+    },
+  },
+};
+</script>
