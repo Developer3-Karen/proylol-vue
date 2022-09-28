@@ -119,8 +119,10 @@
         </b-row>
       </b-container>
     </section>
-    <div class="footer">
-      <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png" />
+    <div class="footer" style="pointer-events: none; cursor: not-allowed;">
+       <!-- eslint-disable-next-line max-len -->
+      <img class="decora" alt="Worlds 2022" src="../assets/ELEMENTO DE DECORACION (1).png" style="pointer-events: none;
+cursor: not-allowed;" />
     </div>
   </div>
 </template>
