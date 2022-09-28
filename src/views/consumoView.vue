@@ -54,7 +54,7 @@ export default {
         email: this.form.email,
       };
       /* eslint-disable */
-      axios.post('https://worlds2022.herokuapp.com/usuario', article
+      axios.post('https://testworld2.herokuapp.com/usuario', article
       , {
         headers: {
             'content-type': 'application/json'

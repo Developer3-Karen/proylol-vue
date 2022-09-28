@@ -10,6 +10,7 @@ import Vista3 from '../views/Vista3View.vue';
 import Vista4 from '../views/Vista4View.vue';
 import VistaLogin from '../views/VistaLoginView.vue';
 import LolEscaneoRegistroUno from '../views/LolEscaneoRegistroView.vue';
+import ConfirmaCorreoExito from '../views/ConfirmaCorreoExitoView.vue';
 
 Vue.use(Router);
 
@@ -64,6 +65,11 @@ export default new Router({
       path: '/lolregistrouno',
       name: 'lolregistrouno',
       component: LolEscaneoRegistroUno,
+    },
+    {
+      path: '/confirmaexito',
+      name: 'lolregistrouno',
+      component: ConfirmaCorreoExito,
     },
   ],
 });

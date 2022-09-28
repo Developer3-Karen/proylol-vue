@@ -193,7 +193,7 @@ export default {
       console.log(this.form);
       /* eslint-disable */
       axios
-        .post('https://worlds2022.herokuapp.com/usuario', article, {
+        .post('https://testworld2.herokuapp.com/usuario', article, {
           headers: {
             'content-type': 'application/json',
           },

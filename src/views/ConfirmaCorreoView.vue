@@ -243,7 +243,7 @@ export default {
       };
       /* eslint-disable */
       axios
-        .post('https://worlds2022.herokuapp.com/confirmarCodigo', article, {
+        .post('https://testworld2.herokuapp.com/confirmarCodigo', article, {
           headers: {
             'content-type': 'application/json',
           },
@@ -254,7 +254,7 @@ export default {
           } else {
             const postar = { codigo_acceso: this.codigo_acceso };
             axios
-              .post('https://worlds2022.herokuapp.com/generarBoleto', postar, {
+              .post('https://testworld2.herokuapp.com/generarBoleto', postar, {
                 headers: {
                   'content-type': 'application/json',
                 },

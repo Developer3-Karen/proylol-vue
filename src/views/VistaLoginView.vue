@@ -23,8 +23,7 @@
                     font-family: 'PPFraktionSans-Bold';
                     margin-bottom: 20px;
                   "
-                  :state="validateStateNombre(form.nombre)"
-                  v-model="form.nombre"
+                  v-model="form.usuario"
                   trim
                   placeholder="USUARIO"
                 ></b-form-input>
@@ -38,8 +37,7 @@
                     font-size: 20px;
                     margin-bottom: 20px;
                   "
-                  v-model="form.email"
-                  :state="validateState(form.email)"
+                  v-model="form.contrasenia"
                   type="email"
                   required
                   placeholder="CONTRASEÑA"
@@ -83,9 +81,8 @@ export default {
   data() {
     return {
       form: {
-        nombre: '',
-        codigo_acceso: '',
-        email: '',
+        usuario: '',
+        contrasenia: '',
       },
       state: '',
     };
@@ -124,24 +121,15 @@ export default {
       console.log(this.form.email);
     },
     submit() {
-      const validateEmail = this.validateState(this.form.email);
-      const validateNombre = this.validateStateNombre(this.form.nombre);
-      if (!validateEmail) {
-        alert('Revisa por favor el campo de email');
-      }
-      if (!validateNombre) {
-        alert('Revisa por favor el campo de nombre');
-      }
       const article = {
-        nombre: this.form.nombre,
-        codigo_acceso: this.form.codigo_acceso,
-        email: this.form.email,
+        usuario: this.form.usuario,
+        contrasenia: this.form.contrasenia,
       };
       console.log('Form');
       console.log(this.form);
       /* eslint-disable */
         axios
-          .post('https://worlds2022.herokuapp.com/usuario', article, {
+          .post('https://testworld2.herokuapp.com/iniciarSesion', article, {
             headers: {
               'content-type': 'application/json',
             },
@@ -150,8 +138,7 @@ export default {
             if (response.data.code === 500) {
               alert(response.data.mensaje);
             } else {
-              alert('Se ha generado correctamente el usuario');
-              this.$router.push('/confirmaCorreo')
+              alert('Credenciales correctas');
             }
           })
           .catch((error) => {
