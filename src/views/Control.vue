@@ -5,44 +5,132 @@
       <img class="img-world-cdmx" src="../assets/worlDs_cdmx_2022.png" alt="" />
     </header>
     <section class="section-fondo--registro" style="padding-top: 120px">
-      <!-- eslint-disable-next-line max-len -->
-      <b-form-group
-        id="fieldset-1"
-        style="
-          color: #f2f2f2;
-          text-align: left;
-          margin-bottom: 20px;
-          font-size: 20px;
-          font-family: 'PPFraktionSans-Bold';
-        "
-        label="Ingresa tus datos de acceso"
-        label-for="input-1"
-        valid-feedback="Thank you!"
-      >
+      <center>
         <!-- eslint-disable-next-line max-len -->
-        <b-form-input id="input-3" v-model="codigo" placeholder="CONTRASEÑA STAFF" required>
-        </b-form-input>
-      </b-form-group>
-      <!-- <b-form-input
+        <b-form-group
+          id="fieldset-1"
+          style="
+            color: #f2f2f2;
+            text-align: left;
+            margin-bottom: 25px;
+            font-size: 20px;
+            font-family: 'PPFraktionSans-Bold';
+            text-align: center;
+          "
+          label="Ingresa tus datos de acceso"
+          label-for="input-1"
+          valid-feedback="Thank you!"
+        >
+          <center>
+            <!-- eslint-disable-next-line max-len -->
+            <b-form-input
+              id="input-3"
+              v-model="codigo_acceso"
+              placeholder="CONTRASEÑA STAFF"
+              required
+              style="
+                height: 30px;
+                width: 500px;
+                margin-top: 20px;
+                text-align: center;
+                border-radius: 50px;
+                text-align: center;
+                font-family: 'PPFraktionSans-Bold';
+                font-size: 20px;
+              "
+            >
+            </b-form-input>
+          </center>
+        </b-form-group>
+        <!-- <b-form-input
         id="input-3"
         v-model="codigo"
         placeholder="CONTRASEÑA STAFF"
         required>
       </b-form-input> -->
-      <!-- <b-button id="buttonRegistrate" variant="primary" v-b-modal.modal-1
+        <!-- <b-button id="buttonRegistrate" variant="primary" v-b-modal.modal-1
         >REGÍSTRATE</b-button> -->
-      <b-button id="buttonRegistrate" @click="submit" variant="primary" v-b-modal.modal-3
-        >REGÍSTRATE</b-button
+        <b-button
+          id="buttonRegistrate"
+          style="
+            background-color: #321bdd;
+            border-radius: 30px;
+            height: 50px;
+            width: 230px;
+            border: none;
+            font-size: 20px;
+            margin-top: 15px;
+            font-family: 'PPFraktionSans-Bold';
+          "
+          @click="submit"
+          variant="primary"
+          v-b-modal.modal-3
+          >ENTRAR</b-button
+        >
+      </center>
+      <!-- Inicia modal 1 -->
+      <!-- eslint-disable-next-line max-len -->
+      <b-modal
+        :ok-disabled="true"
+        ref="my-modal"
+        hide-footer
+        id="modal-3"
+        title="¡Bienvenido!"
+        header-class="my-class"
+        style="text-align: center"
       >
-      <b-modal id="modal-3" title="¡Bienvenido!" style="color:white">
-        <p>{{ leyenda }}</p>
-        <b-form-input v-if="usuarioValido"></b-form-input>
+        <template>
+          <center>
+            <p style="font-family: 'PPFraktionSans-Bold'">{{ leyenda }}</p>
+            <p style="font-family: 'PPFraktionSans-Bold'">{{ leyenda2 }}</p>
+            <p style="font-family: 'PPFraktionSans-Bold'">{{ leyenda3 }}</p>
+            <p style="font-family: 'PPFraktionSans-Bold'">{{ leyenda4 }}</p>
+
+            <p
+              v-if="usuarioValido"
+              style="
+                border-radius: 50px;
+                text-align: center;
+                font-family: 'PPFraktionSans-Bold';
+                font-size: 20px;
+              "
+            ></p>
+            <b-button
+              id="buttonRegistrate"
+              style="
+                background-color: #321bdd;
+                border-radius: 30px;
+                height: 50px;
+                width: 230px;
+                border: none;
+                font-size: 20px;
+                margin-top: 20px;
+                font-family: 'PPFraktionSans-Bold';
+              "
+              @click="cancelarBoleto"
+              variant="primary"
+              v-b-modal.modal-3
+              >DAR ACCESO</b-button
+            >
+            <br />
+          </center>
+        </template>
       </b-modal>
+      <!-- Termina modal 1 -->
     </section>
   </div>
 </template>
-
-<style>
+<style scoped>
+:deep() .my-class {
+  background: #f2f2f2;
+  color: #181818;
+  text-align: center;
+}
+:deep() .my-second-class > .modal-dialog > .modal-content > .modal-header {
+  background: #f2f2f2;
+  color: #181818;
+  text-align: center;
+}
 body {
   background-image: url('https://tes.opl.worldscdmx2022.com/fondo.png');
   background-position: center center;
@@ -129,6 +217,7 @@ main {
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue';
+import axios from 'axios';
 
 export default {
   name: 'ConstruView',
@@ -137,68 +226,194 @@ export default {
   },
   data() {
     return {
+      leyenda3: '',
+      leyenda2: '',
       isModalVisible: false,
-      codigo: '',
+      codigo_acceso: '',
       modal1: false,
       leyenda: '',
       usuarioValido: false,
+      codigo2: '',
+      leyenda4: '',
     };
   },
   mounted() {
     console.log(this.$route.query);
-    console.log(this.$route.query.codigo_acceso);
+    console.log(this.$route.query.codigo);
+    this.codigo2 = this.$route.query.codigo;
   },
   methods: {
-    submit() {
-      console.log(this.codigo);
-      switch (this.codigo) {
-        case 'WCD01':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD02':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD03':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD04':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD05':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD06':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD07':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD08':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD09':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        case 'WCD10':
-          this.leyenda = 'Ingresa tus datos de acceso';
-          this.usuarioValido = true;
-          break;
-        default:
-          console.log('No puede pasar');
-          this.leyenda = 'Codigo invalido';
-          this.usuarioValido = false;
-          break;
-      }
+    showModal() {
+      this.$refs['my-modal'].show();
     },
+    hideModal() {
+      this.$refs['my-modal'].hide();
+    },
+    toggleModal() {
+      // We pass the ID of the button that we want to return focus to
+      // when the modal has hidden
+      this.$refs['my-modal'].toggle('#toggle-btn');
+    },
+    submit() {
+      const article = {
+        codigo_acceso: this.codigo2,
+      };
+      /* eslint-disable */
+      axios
+        .post('https://testworld2.herokuapp.com/generarBoleto', article, {
+          headers: {
+            'content-type': 'application/json',
+          },
+        })
+        .then((response) => {
+          if (response.data.code === 500) {
+            alert(response.data.mensaje);
+          } else {
+            console.log(response.data.data[0].fecha.substring(0, 10));
+            switch (this.codigo_acceso) {
+            case 'WCD01':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              break;
+            case 'WCD02':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              this.leyenda4 = 'Activo: ' + response.data.data[0].activo;
+              break;
+            case 'WCD03':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              break;
+            case 'WCD04':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              
+              break;
+            case 'WCD05':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              break;
+            case 'WCD06':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              break;
+            case 'WCD07':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              break;
+            case 'WCD08':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              break;
+            case 'WCD09':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              break;
+            case 'WCD10':
+              this.usuarioValido = true;
+              this.leyenda = 'Nombre:  ' + response.data.data[0].nombre;
+              this.leyenda2 = 'Codigo:  ' + response.data.data[0].clave;
+              this.leyenda3 = 'Fecha:  ' + response.data.data[0].fecha.substring(0, 10);
+              if(response.data.data[0].activo == 1) {
+                this.leyenda4 = 'Acceso válido';
+              } else {
+                this.leyenda4 = 'Acceso inválido';
+              }
+              break;
+            default:
+              console.log('No puede pasar');
+              this.leyenda = 'ACCESO INVALIDO';
+              this.usuarioValido = false;
+              break;
+          }
+          }
+        })
+        .catch((error) => {
+          console.log('error' + error.data.mensaje);
+          alert('No existe el cupon');
+        });
+    },
+    cancelarBoleto() {
+      const article = {
+        codigo_acceso: this.codigo2,
+      };
+      /* eslint-disable */
+      axios
+        .post('https://testworld2.herokuapp.com/deshabilitarCupon', article, {
+          headers: {
+            'content-type': 'application/json',
+          },
+        })
+        .then((response) => {
+          if (response.data.code === 500) {
+            alert(response.data.mensaje);
+          } else {
+            alert('Se cancelo el boleto correctamente');
+          }
+        })
+        .catch((error) => {
+          console.log('error' + error.data.mensaje);
+          alert('No existe el cupon');
+        });
+    }
   },
 };
 </script>
