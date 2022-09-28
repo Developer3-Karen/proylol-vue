@@ -21,7 +21,7 @@
       type="submit" v-on:click="submit"
       >REGÍSTRATE</b-button
     >
-    <div class="footer">
+    <div class="footer" style="pointer-events: none; cursor: not-allowed;">
       <img class="decora" alt="Worlds 2022" src="https://tes.opl.worldscdmx2022.com/ELEMENTO%20DE%20DECORACION%20(1).png" style="pointer-events: none;
 cursor: not-allowed;" />
     </div>
