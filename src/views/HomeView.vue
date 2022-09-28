@@ -79,6 +79,10 @@ section {
   width: 1260px;
   height: auto;
 }
+.texto{
+  font-size: 20px;
+  color: #181818;
+}
 .img-world-logo {
   margin-top: 30px;
   text-align: left;

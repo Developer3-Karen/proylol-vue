@@ -77,14 +77,14 @@
         id="modal-3"
         title="¡Bienvenido!"
         header-class="my-class"
-        style="text-align: center"
+        style="text-align: center;"
       >
         <template>
           <center>
-            <p style="font-family: 'PPFraktionSans-Bold'">{{ leyenda }}</p>
-            <p style="font-family: 'PPFraktionSans-Bold'">{{ leyenda2 }}</p>
-            <p style="font-family: 'PPFraktionSans-Bold'">{{ leyenda3 }}</p>
-            <p style="font-family: 'PPFraktionSans-Bold'">{{ leyenda4 }}</p>
+            <p class="texto" style="font-family: 'PPFraktionSans-Bold'">{{ leyenda }}</p>
+            <p class="texto" style="font-family: 'PPFraktionSans-Bold'">{{ leyenda2 }}</p>
+            <p class="texto" style="font-family: 'PPFraktionSans-Bold'">{{ leyenda3 }}</p>
+            <p class="texto" style="font-family: 'PPFraktionSans-Bold'">{{ leyenda4 }}</p>
 
             <p
               v-if="usuarioValido"
@@ -125,11 +125,25 @@
   background: #f2f2f2;
   color: #181818;
   text-align: center;
+  font-size: 60px;
+  border: none;
+}
+:deep() #modal-3___BV_modal_header_ > button.close{
+  border: none;
+}
+:deep() #modal-3___BV_modal_title_{
+  font-size: 30px;
+  align-items: center;
+  margin-left: 140px;
 }
 :deep() .my-second-class > .modal-dialog > .modal-content > .modal-header {
   background: #f2f2f2;
   color: #181818;
   text-align: center;
+}
+.close{
+  font-size: 60px;
+  border:none;
 }
 body {
   background-image: url('https://tes.opl.worldscdmx2022.com/fondo.png');
